@@ -1,0 +1,15 @@
+pip install git-filter-repo
+
+git add <filename>
+git commit -m "Remove secret from file"
+
+
+# Suppose your secret was in a file called secrets.txt. To remove all history of this file:
+git filter-repo --path secrets.txt --invert-paths
+
+
+# Or, to remove a specific string (e.g., MY_SECRET_KEY), create a file called replacements.txt with:
+# Client-Id:<secret>
+
+git filter-repo --replace-text deployment.yaml
+
