@@ -1,10 +1,7 @@
 pip install git-filter-repo
 
-git add <filename>
-git commit -m "Remove secret from file"
 
-
-# Suppose your secret was in a file called secrets.txt. To remove all history of this file:
+# Remove file with secret from repo and history
 git filter-repo --path secrets.txt --invert-paths
 
 
