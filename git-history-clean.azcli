@@ -12,8 +12,9 @@ git push --force --all
 git push --force --tags
 
 
-# Or, to remove a specific string (e.g., MY_SECRET_KEY), create a file called replacements.txt with:
-# Client-Id:<secret>
+# Or remove a specific string, create a file called replacements.txt with values to replace
+# {old} which will get the defaul new value of ***removed***
+# {old}==>{new} to use new value of our choosing
 
 git remote -v # in case you need to recreate remote
 
