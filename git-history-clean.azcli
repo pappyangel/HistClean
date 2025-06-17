@@ -4,6 +4,13 @@ pip install git-filter-repo
 # Remove file with secret from repo and history
 git filter-repo --path secrets.txt --invert-paths
 
+git filter-repo --force --path secrets.txt --invert-paths
+
+git remote add origin https://github.com/pappyangel/HistClean.git
+
+git push --force --all
+git push --force --tags
+
 
 # Or, to remove a specific string (e.g., MY_SECRET_KEY), create a file called replacements.txt with:
 # Client-Id:<secret>
