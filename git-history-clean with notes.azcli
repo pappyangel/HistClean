@@ -11,3 +11,18 @@ git remote add origin https://github.com/pappyangel/HistClean.git
 
 git push --force --all
 git push --force --tags
+
+# Or remove a specific string, create a file called replacements.txt with values to replace
+# {old} which will get the default new value of ***REMOVED***
+    # Example: RealPassword
+# {old}==>{new} to use new value of our choosing
+    # Example: RealPassword==>mySelectedValue
+
+git remote -v # in case you need to recreate remote
+
+git filter-repo --replace-text replacements.txt
+
+git remote add origin https://github.com/pappyangel/HistClean.git
+
+git push --force --all origin
+git push --force --tags origin
