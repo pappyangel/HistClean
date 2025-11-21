@@ -1,0 +1,13 @@
+
+# Remove file with secret from repo and history
+
+# the below reqires a fresh clone of the repo you want to clean
+git filter-repo --path Tim-Secret.txt --invert-paths
+
+# If you are not working on a fresh clone, but want to proceed anyway use --force
+git filter-repo --force --path Tim-Secret.txt --invert-paths
+
+git remote add origin https://github.com/pappyangel/HistClean.git
+
+git push --force --all
+git push --force --tags
